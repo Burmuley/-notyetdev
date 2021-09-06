@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+{% assign number_of_posts = 0 %}
+{% assign tagged_posts = "" | split: ',' %}
+{% for post in site.posts %}
+  {% if post.tags contains page.name or page.name == post.tags %}
+    {% assign number_of_posts = number_of_posts | plus: 1 %}
+    {% assign tagged_posts = tagged_posts | push: post %}
+  {% endif %}
+{% endfor %}
+{{ content }}
+<p>Collection of articles tagged with <span>{{ page.name }}</span></p>
+Total number of posts: {{ number_of_posts }}
+{% if tagged_posts.size > 0 %}
+<p><span>Posts:</span></p>
+  {% assign n_post = 1 %}
+  {% for post in tagged_posts %}
+    <p>•{{ n_post }}: <span><a href="{{ post.url }}">{{ post.title }}</a></span></p>
+    {% assign n_post = n_post | plus: 1 %}
+  {% endfor %}
+{% endif %}

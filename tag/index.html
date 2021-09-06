@@ -1,0 +1,8 @@
+---
+layout: default
+---
+<p>Tags available:</p>
+• 
+{% for tag in site.tags %}
+  <a href="{{ site.url }}/{{ tag.url }}">{{ tag.name -}}</a> • 
+{% endfor %}
