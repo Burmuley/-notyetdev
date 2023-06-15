@@ -29,7 +29,7 @@ github_username:  Burmuley
 
 # Build settings
 theme: minima
-plugins: []
+plugins: ["jekyll-mermaid", "jekyll-seo-tag", "jekyll-sitemap"]
 
 collections:
   tags:
