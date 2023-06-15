@@ -12,7 +12,7 @@ author: Konstantin Vasilev
 Message queues. A wonderful approach to connecting two or more services leveraging scaling and resiliency.
 
 One of the applications serving client requests ("frontend") can offload heavy tasks to some more powerful machines for
-further long processing. Those "Big Severs" also have capacity limitations and considering the time-consuming nature of such
+further long processing. Those "Big Servers" also have capacity limitations and considering the time-consuming nature of such
 tasks they all can not fit into the fleet of _"Big Servers"_ at once.
 
 That's when we need some kind of call center for applications when someone would quickly respond with
