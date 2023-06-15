@@ -12,8 +12,8 @@ author: Konstantin Vasilev
 Message queues. A wonderful approach to connecting two or more services leveraging scaling and resiliency.
 
 One of the applications serving client requests ("frontend") can offload heavy tasks to some more powerful machines for
-further long processing. Those "Big Servers" also have capacity limitations and considering the time-consuming nature of such
-tasks they all can not fit into the fleet of _"Big Servers"_ at once.
+further long processing. Those "Big Servers" also have capacity limitations, and considering the time-consuming nature of such
+tasks, they all can not fit into the fleet of _"Big Servers"_ at once.
 
 That's when we need some kind of call center for applications when someone would quickly respond with
 _"Your request is very important to us. We will call you back with the results in a while. Keep in touch."_.
@@ -21,7 +21,9 @@ And in the background would feed tasks one by one across the _"Big Servers"_ poo
 
 ![common queue diagram](/imgs_/priority_pubsub/queue1.png)
 
-Here is my story begins. It's about one monolith application migration to a cloud environment when the customer
+Here my story begins.
+
+It's about one monolith application migration to a cloud environment when the customer
 asked to "add some horizontal scalability".
 
 Don't want to bore you with details. Just picture a simple API service accepting client requests to execute a very long task.
